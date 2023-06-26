@@ -124,7 +124,15 @@ fun Onboarding(navController: NavController, sharedPreferences: SharedPreference
             Text(text = "Register", style = MaterialTheme.typography.h1, fontWeight = FontWeight.Medium)
         }
 
-
+        if(firstName.value.isBlank()||lastName.value.isBlank()||email.value.isBlank()){
+            Text(
+                text = "Please fill all the details!",
+                style = MaterialTheme.typography.h1,
+                fontWeight = FontWeight.Light,
+                color = Color.Red,
+                modifier = Modifier.padding(10.dp)
+            )
+        }
 
     }
 }
